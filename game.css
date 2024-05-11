@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'arenta';
+    src: url(arenta.otf);
+}
 
 body{
     background-color: #fafafa;
@@ -173,12 +177,12 @@ tbody
 
 .btn-b
 {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     background-color: rgb(212, 22, 22);
     color: #fafafa;
     font-family: "arenta";
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 25px;
     animation: 1s ease-in-out 20ms;
     box-shadow: 0px 0px 5px #0a0a0a;
@@ -385,12 +389,12 @@ tbody
 
     .btn-b
     {
-        padding: 10px 15px;
+        padding: 15px 20px;
         border: none;
         background-color: rgb(212, 22, 22);
         color: #fafafa;
         font-family: "arenta";
-        font-size: 12px;
+        font-size: 14px;
         border-radius: 25px;
         animation: 1s ease-in-out 20ms;
         box-shadow: 0px 0px 5px #0a0a0a;
@@ -405,7 +409,7 @@ tbody
 
     .btn-c
     {
-        padding: 10px 20px;
+        padding: 15px 20px;
         border: none;
         background-color: rgb(218, 221, 12);
         font-family: "arenta";
