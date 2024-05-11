@@ -19,7 +19,7 @@ let secretVal = [];
     secretVal.push(computerNum2);
     secretVal.push(computerNum3);
     secretVal.push(computerNum4);
-    console.log(secretVal);
+    // console.log(secretVal);
     
     
     function compareIndexes() {
@@ -34,7 +34,7 @@ let secretVal = [];
     userVal.push(userSecond);
     userVal.push(userThird);
     userVal.push(userFourth);
-    console.log(userVal);
+    // console.log(userVal);
     
     // Ensure arrays have the same length
     if (secretVal.length !== userVal.length) {
