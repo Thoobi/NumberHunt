@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d6a8330679.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="game.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="lead">
+        <h2 class="lead1">Number Hunt: Crack the code &#129299; </h2>
+    </div>
+    <p id="demo"></p>
+    <div class="hold">
+        
+        <input type="text" id="one" maxlength="1">
+        <input type="text" id="two" maxlength="1">
+        <input type="text" id="tree" maxlength="1">
+        <input type="text" id="four" maxlength="1">
+    </div>
+    <br>
+    <div class="btn-of">
+        
+        <button type="submit" class="btn-a" onclick="compareIndexes()">Check</button>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th id="tread">Hints</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bed"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p id="demol"></p>
+    
+    
+    <!-- <p id="demo3"></p> -->
+    
+    <div class="btn-hold">
+        <button class="btn-b" type="submit" onclick="exitGame()">Exit game</button>
+        <button class="btn-c" type="submit" onclick="restartGame()"><i class="fa-solid fa-rotate-right"></i> Restart game</button>
+
+    </div>
+    
+
+    <script src="game.js"></script>
+</body>
+</html>

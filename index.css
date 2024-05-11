@@ -1,0 +1,458 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'arenta';
+    src: url(arenta.otf);
+}
+body
+{
+    background-color: #0a0a0a;
+    color: #fafafa;
+    font-family: 'arenta';
+}
+
+header
+{
+    height: 60px;
+    width: 100%;
+    background-color: #0a0a0a;
+    padding: 10px;
+    box-shadow: 0px 1px 10px #fafafa;
+    display: flex;
+    flex-direction: row;justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+#head1
+{
+    color: #fafafa;
+}
+
+#head0
+{
+    color: #fafafa;
+    margin-left: 20px;
+}
+
+#ham
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+#ham #span1
+{
+    height: 3px;
+    width: 30px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    transition: 0.2s ease-in 30ms;
+}
+
+#ham #span3
+{
+    height: 3px;
+    width: 30px;
+    background-color: #84d07d;
+    border-radius: 10px;
+    transition: 0.2s ease-in 30ms;
+}
+
+.change #span1
+{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+.change #span3
+{
+    transform: rotate(45deg) translate(-2px, -2px);
+}
+.change #span2
+{
+    display: none;
+}
+
+/* pre{
+    font-size: 16px;
+    font-family: "arenta";
+} */
+
+#navIt
+{
+    display: none;
+    background-color: #fafafa;
+    color: #0a0a0a;
+    z-index: 999;
+    padding: 10px 20px 0px 20px;
+    margin: 60px 20px 0px 20px;
+    border-radius: 10px;
+    height: 350px;
+}
+
+.navIt1
+{
+    font-size: 16px;
+    text-align: center;
+    border: 1px dashed #0a0a0a;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 5px;
+}
+
+.navIt2
+{
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px;
+    margin-top: 35px;
+}
+.look2
+{
+    margin-top: 60px;
+    font-size: 10px;
+    text-align: center;
+    padding: 2px;
+    border-bottom: 1px dashed #0a0a0a;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .copy
+{
+    font-size: 10px;
+} */
+
+#main
+{
+    width: 89%;
+    margin: 10px 5.5% 0 5.5%;
+}
+
+.hero
+{
+    width: 100%;
+    background-color:#fafafa;
+    text-align: center;
+    padding: 5px 10px 10px 10px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    color: #0a0a0a;
+    /* box-shadow: 0px 0px 15px #fafafa98; */
+    height: 200px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+#head3
+{
+    font-size: 12px;
+    padding: 10px;
+}
+
+#game1
+{
+    text-align: center;
+    font-size: 18px;
+}
+
+#head2
+{
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#joke
+{
+    font-size: 12px;
+    margin: 0px 4% 0px 4%;
+}
+
+@keyframes bounce1 {
+	0%, 100%, 20%, 50%, 80% {
+		transform:         translateY(0)
+	}
+	40% {
+		transform:         translateY(-10px)
+	}
+	60% {
+		transform:         translateY(-5px)
+	}
+}
+
+#myBtn
+{
+    padding: 10px 25px;
+    background-color: rgb(4, 202, 4);
+    font-family: 'arenta';
+    color: #fafafa;
+    border: none;
+    border-radius: 2px;
+    display: block;
+    margin: 0 auto;
+    animation: 1s ease-in-out 20ms;
+    margin-top: 18px;
+    box-shadow: 1px 0px 3px #fafafa;
+}
+
+#myBtn:hover
+{
+    animation-name: bounce1;
+    cursor: pointer;
+    background-color: rgb(5, 170, 5);
+}
+
+.fun
+{
+    color: #a7ffa4;
+    font-size: 9px;
+    margin-top: 20px;
+    /* border-top: 1px solid #5e785d; */
+    padding: 10px;
+}
+
+#copyright
+{
+    border-top: 1px solid #5e785d;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 800px)
+{
+    header
+    {
+        height: 80px;
+        width: 100%;
+        background-color: #0a0a0a;
+        padding: 10px;
+        box-shadow: 0px 2px 20px #fafafa;
+        display: flex;
+        flex-direction: row;justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    #logo
+    {
+        margin-left: 5%;
+    }
+
+    #head1
+    {
+        color: #fafafa;
+        font-size: 18px;
+    }
+
+    #head0
+    {
+        color: #fafafa;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    #ham
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        height: 50px;
+        width: 50px;
+        margin-right: 5%;
+        cursor: pointer;
+    }
+
+    #ham #span1
+    {
+        height: 4px;
+        width: 40px;
+        background-color: #fafafa;
+        border-radius: 10px;
+        transition: 0.2s ease-in 30ms;
+    }
+
+    #ham #span3
+    {
+        height: 4px;
+        width: 40px;
+        background-color: #71ce69;
+        border-radius: 10px;
+        transition: 0.2s ease-in 30ms;
+    }
+
+    .change #span1
+    {
+        transform: (-47deg) translate(-5px, 3px);
+    }
+    .change #span3
+    {
+        transform: rotate(44deg) translate(-3px, -4px);
+    }
+    .change #span2
+    {
+        display: none;
+    }
+
+
+
+    #navIt
+    {
+        display: none;
+        background-color: #fafafa;
+        color: #0a0a0a;
+        z-index: 999;
+        padding: 10px 20px 0px 20px;
+        margin: 90px 100px 0px 100px;
+        border-radius: 10px;
+        height: 350px;
+    }
+
+    .navIt1
+    {
+        font-size: 20px;
+        text-align: center;
+        border: 1px dashed #0a0a0a;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+
+    .navIt2
+    {
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 40px;
+        padding: 50px;
+
+    }
+    .look2
+    {
+        /* margin-top: 70px;
+        font-size: 14px;
+        text-align: center;
+        padding: 2px;
+        border-bottom: 1px dashed #0a0a0a;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto; */
+        display: none;
+    }
+    /* .copy
+    {
+        font-size: 10px;
+    } */
+
+    #main
+    {
+        width: 89%;
+        margin: 10px 5.5% 0 5.5%;
+    }
+
+    .hero
+    {
+        width: 100%;
+        background-color:#fafafa;
+        text-align: center;
+        padding: 5px 10px 10px 10px;
+        margin-bottom: 15px;
+        color: #0a0a0a;
+        height: 230px;
+        margin-top: 50px;
+    }
+
+    #lock
+    {
+        width: 120px;
+        height: 120px;
+        filter: blur(0.6px);
+    }
+
+    #head3
+    {
+        font-size: 16px;
+        padding-left: 40px;
+        padding-right: 40px;
+        
+    }
+
+    #head2
+    {
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    #joke
+    {
+        font-size: 16px;
+        margin: 20px 4% 0px 4%;
+    }
+
+    @keyframes bounce1 {
+        0%, 100%, 20%, 50%, 80% {
+            transform:         translateY(0)
+        }
+        40% {
+            transform:         translateY(-10px)
+        }
+        60% {
+            transform:         translateY(-5px)
+        }
+    }
+
+    #myBtn
+    {
+        padding: 15px 25px;
+        background-color: rgb(4, 202, 4);
+        font-family: 'arenta';
+        color: #fafafa;
+        border: none;
+        border-radius: 2px;
+        display: block;
+        margin: 0 auto;
+        animation: 1s ease-in-out 20ms;
+        margin-top: 30px;
+        box-shadow: 1px 0px 3px #fafafa;
+    }
+
+    #myBtn:hover
+    {
+        animation-name: bounce1;
+        cursor: pointer;
+        background-color: rgb(5, 170, 5);
+    }
+
+    .fun
+    {
+        color: #a7ffa4;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 40px;
+        padding: 10px;
+    }
+
+    #copyright
+    {
+        border-top: 1px solid #5e785d;
+        font-size: 15px;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
