@@ -97,7 +97,7 @@ input[type="text"]
 {
     animation-name: bounce2;
     cursor: pointer;
-    background-color: rgb(3, 190, 3);
+    background-color: rgb(5, 173, 5);
 }
 
 #demo
@@ -189,12 +189,12 @@ tbody
     box-shadow: 0px 0px 5px #0a0a0a;
 }
 
-.btn-b:hover
+/* .btn-b:hover
 {
     animation-name: bounce2;
     cursor: pointer;
     background-color: rgb(189, 3, 3);
-}
+} */
 
 .btn-c
 {
@@ -208,12 +208,12 @@ tbody
     box-shadow: 0px 0px 5px #0a0a0a;
 }
 
-.btn-c:hover
+/* .btn-c:hover
 {
     animation-name: bounce2;
     cursor: pointer;
     background-color: rgb(189, 192, 4);
-}
+} */
 
 .btn-hold
 {
