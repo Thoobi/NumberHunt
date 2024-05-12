@@ -120,7 +120,8 @@ input[type="text"]
     font-size: 14px;
     font-family: "arenta";
     text-align: center;
-    margin: 7%;
+    margin-right: 8%;
+    margin-left: 8%;
     margin-top: 20px;
     color: rgb(5, 247, 5);
 }
@@ -140,8 +141,8 @@ input[type="text"]
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px dashed #0a0a0a;
-    background-color: #8b662e;
+    border: 2px dashed #fafafa;
+    background-color: #0a0a0a;
     color: #fafafa;
     padding: 10px 10px 50px 10px;
     margin-left: 10%;
@@ -199,7 +200,7 @@ tbody
 {
     padding: 10px 20px;
     border: none;
-    background-color: rgb(218, 221, 12);
+    background-color: #fafafa;
     font-family: "arenta";
     font-size: 14px;
     border-radius: 25px;
@@ -220,6 +221,7 @@ tbody
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-top: 40px;
 }
 
 @media only screen and (min-width: 800px)
@@ -353,7 +355,7 @@ tbody
         align-items: center;
         flex-direction: column;
         border: 2px dashed #fafafa;
-        background-color: #966F33;
+        background-color: #0a0a0a;
         color: #fafafa;
         padding: 10px;
         margin-left: 20%;

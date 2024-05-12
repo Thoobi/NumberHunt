@@ -82,11 +82,6 @@ header
     display: none;
 }
 
-/* pre{
-    font-size: 16px;
-    font-family: "arenta";
-} */
-
 #navIt
 {
     display: none;
@@ -130,10 +125,6 @@ header
     margin-left: auto;
     margin-right: auto;
 }
-/* .copy
-{
-    font-size: 10px;
-} */
 
 #main
 {
@@ -150,7 +141,6 @@ header
     border-radius: 25px;
     margin-bottom: 15px;
     color: #0a0a0a;
-    /* box-shadow: 0px 0px 15px #fafafa98; */
     height: 200px;
     margin-top: 30px;
     font-weight: bold;

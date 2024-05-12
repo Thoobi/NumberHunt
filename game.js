@@ -19,7 +19,7 @@ let secretVal = [];
     secretVal.push(computerNum2);
     secretVal.push(computerNum3);
     secretVal.push(computerNum4);
-    // console.log(secretVal);
+    console.log(secretVal);
     
     
     function compareIndexes() {
@@ -34,24 +34,23 @@ let secretVal = [];
     userVal.push(userSecond);
     userVal.push(userThird);
     userVal.push(userFourth);
-    // console.log(userVal);
-    
-    // Ensure arrays have the same length
-    if (secretVal.length !== userVal.length) {
-        console.log("Numbers must be 4");
-        
-    }
+    console.log(userVal);
+
     let pots = 0; // Count of correct elements in the same position
     let pan = []; // Store indexes of correct elements in different positions
+
     // Iterate through indexes of arrays
-    for (let i = 0; i < userVal.length; i++) {
+    for (let i = 0; i < userVal.length; i++) 
+    {
         if (userVal[i] === secretVal[i]) {
             pots++; // Increment count of correct elements in the same position
         } 
+
+
         else 
         {
             // Check if the number exists in secretVal but in a different position
-            if (secretVal.includes(userVal[i])) {
+            if (userVal.includes(secretVal[i])) {
                 pan.push(i); // Store index of correct element in different position
             }
             else
@@ -75,10 +74,11 @@ let secretVal = [];
                 }
                 else
                 {
-                    if (secretVal.includes(userVal[i])) {
-                        let newText = document.createTextNode(`Number ${userVal[i]} exists but in a different position.`);
+                    if (userVal.includes(secretVal[i])) {
+                        const correctIndex = secretVal.indexOf(userVal[i]);
+                        let newText = document.createTextNode(`Number ${userVal[i]} is correct but in position ${correctIndex + 1} instead of position ${i + 1}.`);
                         newCell.appendChild(newText);
-                    } 
+                    }
                     else 
                     {
                         let newText = document.createTextNode(`Number ${userVal[i]} is not among the hidden value.`);
