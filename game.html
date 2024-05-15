@@ -35,13 +35,17 @@
                 <pre id="check">Each Digit In Range (0 - 9)</pre>
                 <p id="message"></p>
             </div>
-            <button class="btn-d" id="playLowButton">Continue</button>
+            <div class="btn-hold">
+                <button class="btn-d" id="playLowButton">Continue</button>
+                <button class="btn-c" type="submit" onclick="resetGame()"><i class="fa-solid fa-rotate-right"></i> Reset game</button>
+                <button class="btn-b" type="submit" onclick="exitGame()">Exit game</button>
+            </div>
         </div>
     </div>    
-    <div class="btn-hold">
+    <!-- <div class="btn-hold">
         <button class="btn-b" type="submit" onclick="exitGame()">Exit game</button>
         <button class="btn-c" type="submit" onclick="resetGame()"><i class="fa-solid fa-rotate-right"></i> Reset game</button>
-    </div>
+    </div> -->
     <script src="game.js"></script>
 </body>
 </html>
