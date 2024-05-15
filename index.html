@@ -30,9 +30,11 @@
     </div>
     <section id="main">
         <div class="hero">
-            <img src="lock-removebg-preview.png" id="lock" alt="" width="80px" height="90px" style=" filter: blur(0.6px);">
+            <img src="hero.png" id="lock">
             <p id="head3">
-                Embark on a thrilling journey with 'Number Hunt: Crack the Code'! Test your deduction skills as you guess the secret number within a limited number of attempts. <!---->
+                This is a game against computer, Where the the computer picks four random numbers in the range 0 - 9. Your aim is to guess the numbers and arrange the numbers accordingly using the hint provided. The hint provided is the range of computer selection (smallest to Largest Number) and most importantly POTS AND PANS.
+                POT means one of the numbers you guessed is correct and placed in the right order, PAN means you guessed a number right but wrongly placed. For example: A.I SELECTS 1-2-3-4 AND YOUR GUESS IS 1-4-2-8.
+                The game response will be 1 POT and 2 PANS because 1 is correct and rightly placed which makes it a POT, 4 and 2 are also correct but wrongly placed which results in PAN.
             </p>
         </div>
         
@@ -57,9 +59,9 @@
         </ul>
 
         <button onclick="reload()" id="myBtn"><i class="fa-solid fa-play"></i> Start game</button>
-        <p class="fun">
+        <marquee class="fun">
             Get ready to put your deductive skills to the test and embark on an exciting journey of number guessing in "Number Hunt: Crack the code!" Challenge yourself and remember to have fun.
-        </p>
+        </marquee>
     </section> 
     <footer id="footIt">
         <p class="look1" id="copyright"></p>

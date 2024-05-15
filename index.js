@@ -42,8 +42,6 @@ const jump = () =>
                     audio2.pause();
                     audio2.currentTime = 0;
             }
-            
-            
         }
     })
 }

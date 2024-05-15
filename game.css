@@ -28,6 +28,16 @@ body{
     font-size: 16px;
 }
 
+#share
+{
+    font-family: "arenta";
+    font-size: 18px;
+    color: #0a0a0a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
 /* rgb(19, 255, 19) */
 
 .hold
@@ -36,7 +46,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 #one
@@ -74,23 +84,24 @@ input[type="text"]
     box-shadow: 1px 0px 3px #0a0a0a;
 }
 .btn-of
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
 
 .btn-a
 {
-    padding: 15px 30px;
+    padding: 10px 25px;
     border: none;
     border-radius: 25px;
     background-color: rgb(9, 206, 9);
     color: #fafafa;
     font-family: "arenta";
     font-size: 14px;
-    margin-top: 50px;
+    margin-top: 30px;
     box-shadow: 0px 0px 5px #0a0a0a;
 }
 .btn-a:hover
@@ -102,17 +113,18 @@ input[type="text"]
 
 #demo
 {
-    border: 2px solid #0a0a0a;
-    color: #0a0a0a;
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: "arenta";
-    padding: 10px 30px 10px 8px; 
-    margin-top: 10px;
-    margin-right: 66%;
-    margin-left: 6%;
-    text-align: left;
-    box-shadow: 0px 0px 5px #0a0a0a;
+        border: 2px solid #0a0a0a;
+        color: #0a0a0a;
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: "arenta";
+        padding: 10px 10px 10px 10px; 
+        margin-top: 10px;
+        margin-right: 83%;
+        margin-left: 5%;
+        text-align: left;
+        box-shadow: 0px 0px 5px #0a0a0a;
+        width: 30%;
 }
 
 #demol
@@ -135,33 +147,74 @@ input[type="text"]
     margin-top: 30px;
 }
 
-#table
+.push
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 2px dashed #fafafa;
-    background-color: #0a0a0a;
-    color: #fafafa;
-    padding: 10px 10px 50px 10px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 30px;
-    font-family: "arenta";
-    height: 150px;
-    width: 80%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        border: 2px dashed #fafafa;
+        background-color: #0a0a0a;
+        color: #fafafa;
+        padding: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 30px;
+        font-family: "arenta";
+        height: 400px;
+        width: 95%;
 }
 
-thead
+.dig
 {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0a0a0a;
+    color: #fafafa;
+    width: 90%;
+    margin-top: 5px;
+    height: 300px;
+    box-shadow: 0px 0px 15px #fafafa;
 }
-tbody
+
+#potIt
 {
-    font-size: 12px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#panIt
+{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#check
+{
+    font-size: 18px;
+    margin-top: 20px;
+    color:yellow;
+}
+
+#message
+{
+    margin-top: 50px;
+}
+
+.btn-d
+{
+    padding: 10px 15px;
+    margin-top: 5px;
+    border: none;
+    background-color: #fafafa;
+    color: #0a0a0a;
+    font-family: "arenta";
+    font-size: 14px;
+    border-radius: 25px;
+    animation: 1s ease-in-out 20ms;
+    box-shadow: 0px 0px 5px #0a0a0a;
 }
 
 @keyframes bounce2 {
@@ -189,13 +242,6 @@ tbody
     box-shadow: 0px 0px 5px #0a0a0a;
 }
 
-/* .btn-b:hover
-{
-    animation-name: bounce2;
-    cursor: pointer;
-    background-color: rgb(189, 3, 3);
-} */
-
 .btn-c
 {
     padding: 10px 20px;
@@ -208,20 +254,13 @@ tbody
     box-shadow: 0px 0px 5px #0a0a0a;
 }
 
-/* .btn-c:hover
-{
-    animation-name: bounce2;
-    cursor: pointer;
-    background-color: rgb(189, 192, 4);
-} */
-
 .btn-hold
 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 40px;
+    margin: 20px;
 }
 
 @media only screen and (min-width: 800px)
@@ -319,14 +358,15 @@ tbody
         border: 2px solid #0a0a0a;
         color: #0a0a0a;
         border-radius: 10px;
-        font-size: 14px;
+        font-size: 16px;
         font-family: "arenta";
-        padding: 10px 10px 10px 10px; 
+        padding: 20px 10px 20px 10px; 
         margin-top: 10px;
         margin-right: 83%;
         margin-left: 10%;
         text-align: left;
         box-shadow: 0px 0px 5px #0a0a0a;
+        width: 10%;
     }
 
     #demol
@@ -348,11 +388,12 @@ tbody
         margin-top: 30px;
     }
 
-    #table
+    .push
     {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        gap: 10px;
         flex-direction: column;
         border: 2px dashed #fafafa;
         background-color: #0a0a0a;
@@ -362,19 +403,39 @@ tbody
         margin-right: 20%;
         margin-top: 30px;
         font-family: "arenta";
-        height: 150px;
-        width: 700px;
+        height: 400px;
+        width: 70%;
     }
 
-    thead
+    .dig
     {
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #0a0a0a;
+        color: #fafafa;
+        width: 80%;
+        margin-top: 5px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px #fafafa;
     }
-    tbody
+
+    #potIt
     {
-        font-size: 12px;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    #panIt
+    {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    #message
+    {
+        margin-top: 50px;
     }
 
     @keyframes bounce2 {
@@ -402,6 +463,20 @@ tbody
         box-shadow: 0px 0px 5px #0a0a0a;
     }
 
+    .btn-d
+    {
+        padding: 15px 20px;
+        margin-top: 5px;
+        border: none;
+        background-color: #fafafa;
+        color: #0a0a0a;
+        font-family: "arenta";
+        font-size: 14px;
+        border-radius: 25px;
+        animation: 1s ease-in-out 20ms;
+        box-shadow: 0px 0px 5px #0a0a0a;
+    }
+
     .btn-b:hover
     {
         animation-name: bounce2;
@@ -413,7 +488,7 @@ tbody
     {
         padding: 15px 20px;
         border: none;
-        background-color: rgb(218, 221, 12);
+        background-color: #fafafa;
         font-family: "arenta";
         font-size: 14px;
         border-radius: 25px;
@@ -425,7 +500,8 @@ tbody
     {
         animation-name: bounce2;
         cursor: pointer;
-        background-color: rgb(189, 192, 4);
+        background-color: #0a0a0a;
+        color: #fafafa;
     }
 
     .btn-hold
@@ -433,6 +509,7 @@ tbody
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 100px         
+        gap: 100px; 
+        margin-top: 30px;
     }
 }

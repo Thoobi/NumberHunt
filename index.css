@@ -141,7 +141,7 @@ header
     border-radius: 25px;
     margin-bottom: 15px;
     color: #0a0a0a;
-    height: 200px;
+    height:400px;
     margin-top: 30px;
     font-weight: bold;
 }
@@ -226,7 +226,7 @@ header
 {
     header
     {
-        height: 80px;
+        height: 100px;
         width: 100%;
         background-color: #0a0a0a;
         padding: 10px;
@@ -245,14 +245,14 @@ header
     #head1
     {
         color: #fafafa;
-        font-size: 18px;
+        font-size: 26px;
     }
 
     #head0
     {
-        color: #fafafa;
-        margin-left: 20px;
-        font-size: 18px;
+        color: #71ce69;
+        margin-left: 50px;
+        font-size: 26px;
     }
     #ham
     {
@@ -262,7 +262,7 @@ header
         align-items: center;
         gap: 5px;
         height: 50px;
-        width: 50px;
+        width: 60px;
         margin-right: 5%;
         cursor: pointer;
     }
@@ -298,8 +298,6 @@ header
         display: none;
     }
 
-
-
     #navIt
     {
         display: none;
@@ -319,7 +317,7 @@ header
         border: 1px dashed #0a0a0a;
         margin-left: auto;
         margin-right: auto;
-        width: 40%;
+        width: 25%;
     }
 
     .navIt2
@@ -333,20 +331,16 @@ header
     }
     .look2
     {
-        /* margin-top: 70px;
+        margin-top: 70px;
         font-size: 14px;
         text-align: center;
         padding: 2px;
         border-bottom: 1px dashed #0a0a0a;
         width: 40%;
         margin-left: auto;
-        margin-right: auto; */
+        margin-right: auto;
         display: none;
     }
-    /* .copy
-    {
-        font-size: 10px;
-    } */
 
     #main
     {
@@ -359,38 +353,38 @@ header
         width: 100%;
         background-color:#fafafa;
         text-align: center;
-        padding: 5px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
         margin-bottom: 15px;
         color: #0a0a0a;
-        height: 230px;
+        height: 450px;
         margin-top: 50px;
     }
 
     #lock
     {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         filter: blur(0.6px);
     }
 
     #head3
     {
-        font-size: 16px;
+        font-size: 20px;
         padding-left: 40px;
         padding-right: 40px;
-        
+        margin-top: 20px;
     }
 
     #head2
     {
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         padding-bottom: 10px;
     }
 
     #joke
     {
-        font-size: 16px;
+        font-size: 20px;
         margin: 20px 4% 0px 4%;
     }
 
@@ -408,7 +402,7 @@ header
 
     #myBtn
     {
-        padding: 15px 25px;
+        padding: 20px 40px;
         background-color: rgb(4, 202, 4);
         font-family: 'arenta';
         color: #fafafa;
@@ -431,9 +425,8 @@ header
     .fun
     {
         color: #a7ffa4;
-        font-size: 12px;
-        text-align: center;
-        margin-top: 40px;
+        font-size: 14px;
+        margin-top: 50px;
         padding: 10px;
     }
 
@@ -445,4 +438,9 @@ header
         padding: 10px;
     }
 
+    #img1
+    {
+        width: 200px;
+        height: 200px;
+    }
 }

@@ -11,8 +11,10 @@
 <body>
     <div class="lead">
         <h2 class="lead1">Number Hunt: Crack the code &#129299; </h2>
+        <p id="share"></p>
     </div>
-    <p id="demo"></p>
+        
+    <p id="demo">Score: 0</p>
     <div class="hold">
         
         <input type="text" id="one" maxlength="1" autocomplete="off">
@@ -22,33 +24,24 @@
     </div>
     <br>
     <div class="btn-of">
-        
         <button type="submit" class="btn-a" onclick="compareIndexes()">Check</button>
-        <table id="table">
-            <thead>
-                <tr>
-                    <th id="tread">Hints</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="bed"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <p id="demol"></p>
-    
-    
-    <!-- <p id="demo3"></p> -->
-    
+        <div class="push">
+            <h3>Hints</h3>
+            <div class="dig">
+                <div class="jug">
+                    <p id="potIt">pots</p>
+                    <p id="panIt">pans</p>
+                </div>
+                <pre id="check">Each Digit In Range (0 - 9)</pre>
+                <p id="message"></p>
+            </div>
+            <button class="btn-d" id="playLowButton">Continue</button>
+        </div>
+    </div>    
     <div class="btn-hold">
         <button class="btn-b" type="submit" onclick="exitGame()">Exit game</button>
-        <button class="btn-c" type="submit" onclick="restartGame()"><i class="fa-solid fa-rotate-right"></i> Restart game</button>
-
+        <button class="btn-c" type="submit" onclick="resetGame()"><i class="fa-solid fa-rotate-right"></i> Reset game</button>
     </div>
-    
-
     <script src="game.js"></script>
 </body>
 </html>

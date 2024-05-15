@@ -1,29 +1,33 @@
+setInterval(() => {
+    const just = new Date();
+    document.getElementById('share').innerHTML = `${just.toLocaleTimeString()}`;
+}, 1000);
 
-const audio1 = new Audio();
-audio1.src="win.wav";
+let score = 0;
+
+const audio1 = new Audio;
+audio1.src = 'win.wav';
 
 const audio2 = new Audio;
 audio2.src = 'sweep.wav';
 
-
-const storeArray = [];
+let newStoreArray;
 let secretVal = [];
 
-    let computerNum1 = Math.floor(Math.random() * 10);
-    let computerNum2 = Math.floor(Math.random() * 10);
-    let computerNum3 = Math.floor(Math.random() * 10);
-    let computerNum4 = Math.floor(Math.random() * 10);
+let computerNum1 = Math.floor(Math.random() * 10);
+let computerNum2 = Math.floor(Math.random() * 10);
+let computerNum3 = Math.floor(Math.random() * 10);
+let computerNum4 = Math.floor(Math.random() * 10);
+//aray that stores the computer scret code
+secretVal.push(computerNum1);
+secretVal.push(computerNum2);
+secretVal.push(computerNum3);
+secretVal.push(computerNum4);
+// console.log(secretVal);
 
-    //aray that stores the computer scret code
-    secretVal.push(computerNum1);
-    secretVal.push(computerNum2);
-    secretVal.push(computerNum3);
-    secretVal.push(computerNum4);
-    console.log(secretVal);
-    
-    
-    function compareIndexes() {
-    
+
+function compareIndexes() 
+{
     let userVal = [];
     let userFirst = parseInt(document.getElementById("one").value);
     let userSecond = parseInt(document.getElementById("two").value);
@@ -34,167 +38,142 @@ let secretVal = [];
     userVal.push(userSecond);
     userVal.push(userThird);
     userVal.push(userFourth);
-    console.log(userVal);
+    // console.log(userVal);
+    
+    // Count of correct elements in the same position
+    let pots = 0;
 
-    let pots = 0; // Count of correct elements in the same position
-    let pan = []; // Store indexes of correct elements in different positions
-
+    // Store indexes of correct elements in different positions
+    let panDigit ="";
+    let pan = [];
+    
     // Iterate through indexes of arrays
     for (let i = 0; i < userVal.length; i++) 
     {
-        if (userVal[i] === secretVal[i]) {
-            pots++; // Increment count of correct elements in the same position
+        if (userVal[i] === secretVal[i]) 
+        {
+            pots++;
         } 
-
-
         else 
         {
             // Check if the number exists in secretVal but in a different position
             if (userVal.includes(secretVal[i])) {
-                pan.push(i); // Store index of correct element in different position
-            }
-            else
-            {
-                //  `Number ${userVal[i]} is not among the hidden value.`;
-                const tableOr = document.getElementById('table').getElementsByTagName('tbody')[0];
-
-                while (tableOr.firstChild) {
-                    tableOr.removeChild(tableOr.firstChild);
-                }
-                
-                // Insert new row
-                const newRow = tableOr.insertRow();
-                const newCell = newRow.insertCell();
-
-                
-                if(isNaN(userVal[i]))
-                {
-                    let newText = document.createTextNode(`Please enter your guess`);
-                    newCell.appendChild(newText);
-                }
-                else
-                {
-                    if (userVal.includes(secretVal[i])) {
-                        const correctIndex = secretVal.indexOf(userVal[i]);
-                        let newText = document.createTextNode(`Number ${userVal[i]} is correct but in position ${correctIndex + 1} instead of position ${i + 1}.`);
-                        newCell.appendChild(newText);
-                    }
-                    else 
-                    {
-                        let newText = document.createTextNode(`Number ${userVal[i]} is not among the hidden value.`);
-                        newCell.appendChild(newText);
-                    }
-                }
+                panDigit++;
+                pan.push(panDigit);
+                // console.log(pan.length);
             }
         }
     }
 
-    if (pots === secretVal.length) {
-
-        console.log(`Pots: ${pots}     
-        Pans: 0`)
-        const message = `Pots: ${pots} \t\t\t Pans: 0`;
-        document.getElementById('demo').innerHTML = message;
-        document.getElementById('demol').innerHTML = `Congratulations You guessed 
-        all correctly! 🎊🎉🎉`;
+    if (pots === 4) 
+    {
+        audio1.play();
+        const message = `Pots: ${pots} Pans: 0`;
+        document.getElementById('potIt').innerHTML = `Pot: ${pots}`;
+        document.getElementById('panIt').innerHTML = `Pan: ${pan.length}`;
+        document.getElementById('message').innerHTML = `Congratulations you won 🎊🎉🎉`;
 
         var duration = 10 * 1000;
         var animationEnd = Date.now() + duration;
-        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-        function randomInRange(min, max) {
-        return Math.random() * (max - min) + min;
+        var defaults = 
+        {
+            startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 
+        };
+        function randomInRange(min, max) 
+        {
+            return Math.random() * (max - min) + min;
         }
-
         var interval = setInterval(function() {
         var timeLeft = animationEnd - Date.now();
-
-        if (timeLeft <= 0) {
+        if (timeLeft <= 0) 
+        {
             return clearInterval(interval);
         }
-
-        var particleCount = 50 * (timeLeft / duration);
+        var particleCount = 100 * (timeLeft / duration);
         // since particles fall down, start a bit higher than random
-        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.05, 0.4), y: Math.random() - 0.2 } });
         confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-        }, 250);// All elements correct and in the same position
+        }, 200);// All elements correct and in the same position
         
-        audio1.play();
-    } 
+        score++;
+        const playLow = () =>
+        {
+            let audio6 = new Audio();
+            audio6.src ="hard.wav";
+            audio6.play();
+            document.getElementById('one').value= "";
+            document.getElementById('two').value = "";
+            document.getElementById('tree').value = "";
+            document.getElementById('four').value = "";
+            document.getElementById('potIt').innerHTML = ``;
+            document.getElementById('panIt').innerHTML = ``;
+            document.getElementById('message').innerHTML = `Enter your guess again`;  
+            document.getElementById('demo').innerHTML =  `Score: ${score}`;
 
-    else if (pan.length > 0) {
+            secretVal = [];
+            let computerNum1 = Math.floor(Math.random() * 10);
+            let computerNum2 = Math.floor(Math.random() * 10);
+            let computerNum3 = Math.floor(Math.random() * 10);
+            let computerNum4 = Math.floor(Math.random() * 10);
 
-        if (document.readyState === "complete") {
-            if(pan.length == 1)
-            {
-                const message1 = `Pots: ${pots}  
-                Pans: ${pan.length}`;
-                document.getElementById('demo').innerHTML = message1;
-                document.getElementById('demol').innerHTML = `Getting closer :)`;
-                audio2.play();
-            }
-            else if(pan.length == 2)
-            {
-                const message1 = `Pots: ${pots}  
-                Pans: ${pan.length}`;
-                document.getElementById('demo').innerHTML = message1;
-                document.getElementById('demol').innerHTML = `No reward in giving up :)`;
-                audio2.play();
-            }
-            else if(pan.length === 3)
-            {
-                const message1 = `Pots: ${pots}  
-                Pans: ${pan.length}`;
-                document.getElementById('demo').innerHTML = message1;
-                document.getElementById('demol').innerHTML = `You are amazing! :)`;
-                audio2.play();
-            }
+            //aray that stores the computer scret code
+            secretVal.push(computerNum1);
+            secretVal.push(computerNum2);
+            secretVal.push(computerNum3);
+            secretVal.push(computerNum4);
+            // console.log(secretVal);
         }
+        const playLowButton = document.getElementById('playLowButton');
+        playLowButton.addEventListener('click', playLow);
     } 
-    else if(pan.length === 0 && pots === 4)
+    else 
     {
-        document.getElementById('demo3').innerHTML = `congratulations`;
+        document.getElementById('potIt').innerHTML = `Pot: ${pots}`;
+        document.getElementById('panIt').innerHTML = `Pan: ${pan.length}`;
     }
-    else {
-
-        const message2 = `Pots: 0  
-        Pans: 0`;
-        document.getElementById('demo').innerHTML = message2;
-        if (document.readyState === "complete") {
-            audio2.play();
-        }
-        // document.getElementById('demo3').innerHTML = "";
-        
-    }
-    
 }
-
 compareIndexes();
 
-let audio5 = new Audio();
-audio5.src ="hard.wav";
-
-const restartGame = () =>
+const resetGame = () =>
 {
-    if (document.readyState === "complete") {
+    if (document.readyState === "complete") 
+    {
+        let audio6 = new Audio();
+        audio6.src ="hard.wav";
+        audio6.play();
+        document.getElementById('one').value= "";
+        document.getElementById('two').value = "";
+        document.getElementById('tree').value = "";
+        document.getElementById('four').value = "";
+        document.getElementById('potIt').innerHTML = ``;
+        document.getElementById('panIt').innerHTML = ``;
+        document.getElementById('message').innerHTML = ``;
+        document.getElementById('demo').innerHTML =  `Score: ${score}`;
+        score = 0;
 
-        const audio4 = new Audio();
-        audio4.src ="hard.wav";
-        audio4.play();
-
-        // Reload the page after a short delay to allow the audio to start playing
-        setTimeout(() => {
-            location.reload();
-        }, 1000);
+        secretVal = [];
+        let computerNum1 = Math.floor(Math.random() * 10);
+        let computerNum2 = Math.floor(Math.random() * 10);
+        let computerNum3 = Math.floor(Math.random() * 10);
+        let computerNum4 = Math.floor(Math.random() * 10);
+        //aray that stores the computer scret code
+        secretVal.push(computerNum1);
+        secretVal.push(computerNum2);
+        secretVal.push(computerNum3);
+        secretVal.push(computerNum4);
+        // console.log(secretVal);
+        // scoreOutput = `Score: ${score}`;
+        // console.log(scoreOutput);
+        // console.log("true");
     }
 }
-restartGame()
+resetGame()
 
 const exitGame = () =>
 {
-
     if (document.readyState === "complete") {
-        
+        let audio5 = new Audio();
+        audio5.src ="hard.wav"; 
         audio5.play();
 
         const userInput = prompt('Are you sure you want to exit game? Y/N');
@@ -205,25 +184,6 @@ const exitGame = () =>
                 window.open('index.html', name = self);
             }, 1000);
         }
-        else
-        {
-            console.log("lol");
-        }
-        
-        // audio5.play();
     }
 }
 exitGame()
-
-
-
-
-
-
-
-
-
-
-
-
-
