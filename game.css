@@ -53,25 +53,25 @@ body{
 #one
 {
     width: 70px;
-    height: 50px;
+    height: 70px;
 }
 
 #two
 {
     width: 70px;
-    height: 50px;
+    height: 60px;
 }
 
 #tree
 {
     width: 70px;
-    height: 50px;
+    height: 60px;
 }
 
 #four
 {
     width: 70px;
-    height: 50px;
+    height: 70px;
 }
 
 input[type="text"]
@@ -182,9 +182,17 @@ input[type="text"]
 
 #check
 {
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 20px;
-    color:#fafafa;
+    color:#fffb20;
+}
+
+.jug
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 #message
@@ -298,13 +306,13 @@ input[type="text"]
     #two
     {
         width: 110px;
-        height: 90px;
+        height: 80px;
     }
 
     #tree
     {
         width: 110px;
-        height: 90px;
+        height: 80px;
     }
 
     #four
@@ -424,12 +432,12 @@ input[type="text"]
         margin-top: 30px;
         margin-bottom: 50px;
     }
-
+    
     #check
     {
         font-size: 18px;
         margin-top: 20px;
-        color:#fafafa;
+        color: #fffb20;
     }
 
     @keyframes bounce2 {
