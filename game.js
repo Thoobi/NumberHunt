@@ -68,6 +68,8 @@ function compareIndexes()
     if (pots === 4) 
     {
         audio1.play();
+        score += 1;
+        document.getElementById('demo').innerHTML =  `Score: ${score}`;
         const message = `Pots: ${pots} Pans: 0`;
         document.getElementById('potIt').innerHTML = `Pot: ${pots}`;
         document.getElementById('panIt').innerHTML = `Pan: ${pan.length}`;
@@ -95,7 +97,7 @@ function compareIndexes()
         confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
         }, 200);// All elements correct and in the same position
         
-        score++;
+        
         const playLow = () =>
         {
             let audio6 = new Audio();
@@ -108,7 +110,6 @@ function compareIndexes()
             document.getElementById('potIt').innerHTML = ``;
             document.getElementById('panIt').innerHTML = ``;
             document.getElementById('message').innerHTML = `Enter your guess again`;  
-            document.getElementById('demo').innerHTML =  `Score: ${score}`;
 
             secretVal = [];
             let computerNum1 = Math.floor(Math.random() * 10);
