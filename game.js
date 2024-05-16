@@ -4,7 +4,7 @@ setInterval(() => {
 }, 1000);
 
 let score = 0;
-
+let buttonClicked = false;
 const audio1 = new Audio;
 audio1.src = 'win.wav';
 
@@ -42,7 +42,6 @@ function compareIndexes()
     
     // Count of correct elements in the same position
     let pots = 0;
-
     // Store indexes of correct elements in different positions
     let panDigit ="";
     let pan = [];
@@ -63,19 +62,20 @@ function compareIndexes()
                 // console.log(pan.length);
             }
         }
+        
     }
 
-    if (pots === 4) 
+    if (pots === 4 && !buttonClicked) 
     {
+        score++;
+        buttonClicked = true;
         audio1.play();
-        score += 1;
         document.getElementById('demo').innerHTML =  `Score: ${score}`;
-        const message = `Pots: ${pots} Pans: 0`;
         document.getElementById('potIt').innerHTML = `Pot: ${pots}`;
         document.getElementById('panIt').innerHTML = `Pan: ${pan.length}`;
-        document.getElementById('message').innerHTML = `Congratulations you won 🎊🎉🎉`;
+        document.getElementById('message').innerHTML = `Congratulations you are a winner 🎊🎉🎉`;
 
-        var duration = 10 * 1000;
+        var duration = 2000;
         var animationEnd = Date.now() + duration;
         var defaults = 
         {
@@ -85,55 +85,68 @@ function compareIndexes()
         {
             return Math.random() * (max - min) + min;
         }
-        var interval = setInterval(function() {
-        var timeLeft = animationEnd - Date.now();
-        if (timeLeft <= 0) 
+        var interval = setInterval(function() 
         {
-            return clearInterval(interval);
-        }
-        var particleCount = 100 * (timeLeft / duration);
-        // since particles fall down, start a bit higher than random
-        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.05, 0.4), y: Math.random() - 0.2 } });
-        confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-        }, 200);// All elements correct and in the same position
-        
-        
-        const playLow = () =>
+            var timeLeft = animationEnd - Date.now();
+            if (timeLeft <= 0) 
+            {
+                return clearInterval(interval);
+            }
+            var particleCount = 100 * (timeLeft / duration);
+            // since particles fall down, start a bit higher than random
+            confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.05, 0.4), y: Math.random() - 0.2 } });
+            confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+        }, 50);// All elements correct and in the same position
+        // document.getElementById('checked').disabled = false;
+        setTimeout(() =>
         {
-            let audio6 = new Audio();
-            audio6.src ="hard.wav";
-            audio6.play();
             document.getElementById('one').value= "";
             document.getElementById('two').value = "";
             document.getElementById('tree').value = "";
             document.getElementById('four').value = "";
-            document.getElementById('potIt').innerHTML = ``;
-            document.getElementById('panIt').innerHTML = ``;
-            document.getElementById('message').innerHTML = `Enter your guess again`;  
-
-            secretVal = [];
-            let computerNum1 = Math.floor(Math.random() * 10);
-            let computerNum2 = Math.floor(Math.random() * 10);
-            let computerNum3 = Math.floor(Math.random() * 10);
-            let computerNum4 = Math.floor(Math.random() * 10);
-
-            //aray that stores the computer scret code
-            secretVal.push(computerNum1);
-            secretVal.push(computerNum2);
-            secretVal.push(computerNum3);
-            secretVal.push(computerNum4);
-            // console.log(secretVal);
-        }
-        const playLowButton = document.getElementById('playLowButton');
-        playLowButton.addEventListener('click', playLow);
-    } 
+            // document.getElementById('checked').disabled = true;
+        }, 2000);
+        
+    }
     else 
     {
         document.getElementById('potIt').innerHTML = `Pot: ${pots}`;
         document.getElementById('panIt').innerHTML = `Pan: ${pan.length}`;
     }
+    
 }
 compareIndexes();
+
+
+const playLow = () =>
+{
+    let audio6 = new Audio();
+    audio6.src ="hard.wav";
+    audio6.play();
+    document.getElementById('one').value= "";
+    document.getElementById('two').value = "";
+    document.getElementById('tree').value = "";
+    document.getElementById('four').value = "";
+    document.getElementById('potIt').innerHTML = ``;
+    document.getElementById('panIt').innerHTML = ``;
+    document.getElementById('message').innerHTML = `Enter your guess again`;  
+    secretVal = [];
+    let computerNum1 = Math.floor(Math.random() * 10);
+    let computerNum2 = Math.floor(Math.random() * 10);
+    let computerNum3 = Math.floor(Math.random() * 10);
+    let computerNum4 = Math.floor(Math.random() * 10);
+    //aray that stores the computer scret code
+    secretVal.push(computerNum1);
+    secretVal.push(computerNum2);
+    secretVal.push(computerNum3);
+    secretVal.push(computerNum4);
+    buttonClicked = false;
+    // console.log(secretVal);
+    // document.getElementById('checked').disabled = false;
+    console.log("true");
+}
+const playLowButton = document.getElementById('playLowButton');
+playLowButton.addEventListener('click', playLow);
 
 const resetGame = () =>
 {
@@ -149,8 +162,9 @@ const resetGame = () =>
         document.getElementById('potIt').innerHTML = ``;
         document.getElementById('panIt').innerHTML = ``;
         document.getElementById('message').innerHTML = ``;
-        document.getElementById('demo').innerHTML =  `Score: ${score}`;
         score = 0;
+        document.getElementById('demo').innerHTML =  `Score: ${score}`;
+        
 
         secretVal = [];
         let computerNum1 = Math.floor(Math.random() * 10);
