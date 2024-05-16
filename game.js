@@ -143,31 +143,36 @@ const resetGame = () =>
         let audio6 = new Audio();
         audio6.src ="hard.wav";
         audio6.play();
-        document.getElementById('one').value= "";
-        document.getElementById('two').value = "";
-        document.getElementById('tree').value = "";
-        document.getElementById('four').value = "";
-        document.getElementById('potIt').innerHTML = ``;
-        document.getElementById('panIt').innerHTML = ``;
-        document.getElementById('message').innerHTML = ``;
-        score = 0;
-        document.getElementById('demo').innerHTML =  `Score: ${score}`;
-        
+        const userInput = prompt('Are you sure you want to reset game? Y/N');
+        if(userInput.toLowerCase() == 'y')
+        {
+            document.getElementById('one').value= "";
+            document.getElementById('two').value = "";
+            document.getElementById('tree').value = "";
+            document.getElementById('four').value = "";
+            document.getElementById('potIt').innerHTML = ``;
+            document.getElementById('panIt').innerHTML = ``;
+            document.getElementById('message').innerHTML = ``;
+            score = 0;
+            document.getElementById('demo').innerHTML =  `Score: ${score}`;
+            
 
-        secretVal = [];
-        let computerNum1 = Math.floor(Math.random() * 10);
-        let computerNum2 = Math.floor(Math.random() * 10);
-        let computerNum3 = Math.floor(Math.random() * 10);
-        let computerNum4 = Math.floor(Math.random() * 10);
-        //aray that stores the computer scret code
-        secretVal.push(computerNum1);
-        secretVal.push(computerNum2);
-        secretVal.push(computerNum3);
-        secretVal.push(computerNum4);
-        // console.log(secretVal);
-        // scoreOutput = `Score: ${score}`;
-        // console.log(scoreOutput);
-        // console.log("true");
+            secretVal = [];
+            let computerNum1 = Math.floor(Math.random() * 10);
+            let computerNum2 = Math.floor(Math.random() * 10);
+            let computerNum3 = Math.floor(Math.random() * 10);
+            let computerNum4 = Math.floor(Math.random() * 10);
+            //aray that stores the computer scret code
+            secretVal.push(computerNum1);
+            secretVal.push(computerNum2);
+            secretVal.push(computerNum3);
+            secretVal.push(computerNum4);
+            // console.log(secretVal);
+            // scoreOutput = `Score: ${score}`;
+            // console.log(scoreOutput);
+            // console.log("true");
+        }
+        
     }
 }
 resetGame()
@@ -192,12 +197,15 @@ const exitGame = () =>
 exitGame()
 
 var elts = document.getElementsByClassName('test')
-Array.from(elts).forEach(function(elt){
-  elt.addEventListener("keyup", function(event) {
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13 || elt.value.length == 1) {
-      // Focus on the next sibling
-      elt.nextElementSibling.focus()
-    }
-  });
+Array.from(elts).forEach(function(elt)
+{
+    elt.addEventListener("keyup", function(event) 
+    {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13 || elt.value.length == 1) 
+        {
+            // Focus on the next sibling
+            elt.nextElementSibling.focus()
+        }
+    });
 });
