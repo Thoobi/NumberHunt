@@ -5,6 +5,7 @@ setInterval(() => {
 
 let score = 0;
 let buttonClicked = false;
+
 const audio1 = new Audio;
 audio1.src = 'win.wav';
 
@@ -97,16 +98,6 @@ function compareIndexes()
             confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.05, 0.4), y: Math.random() - 0.2 } });
             confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
         }, 50);// All elements correct and in the same position
-        // document.getElementById('checked').disabled = false;
-        setTimeout(() =>
-        {
-            document.getElementById('one').value= "";
-            document.getElementById('two').value = "";
-            document.getElementById('tree').value = "";
-            document.getElementById('four').value = "";
-            // document.getElementById('checked').disabled = true;
-        }, 2000);
-        
     }
     else 
     {
@@ -141,9 +132,6 @@ const playLow = () =>
     secretVal.push(computerNum3);
     secretVal.push(computerNum4);
     buttonClicked = false;
-    // console.log(secretVal);
-    // document.getElementById('checked').disabled = false;
-    console.log("true");
 }
 const playLowButton = document.getElementById('playLowButton');
 playLowButton.addEventListener('click', playLow);
