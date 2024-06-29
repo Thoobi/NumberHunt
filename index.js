@@ -21,7 +21,7 @@ const jump = () =>
     const footIt = document.getElementById("footIt");
 
 
-    switch1.addEventListener("click", ()=>{
+    switch1.addEventListener("click", () => {
 
         if(switch1.classList.toggle("change"))
         {
@@ -29,18 +29,19 @@ const jump = () =>
             switch2.style.display = "none";
             footIt.style.display = "none";
             audio2.play();
-            console.log("true");
+            audio3.pause()
+            audio3.currentTime = 0
         }
         else 
         {
             if(document.readyState === "complete")
             {
                 audio3.play();  
-                    navIt.style.display = "none";
-                    switch2.style.display = "block";
-                    footIt.style.display = "block";
-                    audio2.pause();
-                    audio2.currentTime = 0;
+                navIt.style.display = "none";
+                switch2.style.display = "block";
+                footIt.style.display = "block";
+                audio2.pause();
+                audio2.currentTime = 0;
             }
         }
     })

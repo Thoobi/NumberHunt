@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome to the Game</title>
     <script src="https://kit.fontawesome.com/d6a8330679.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="game.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -15,8 +15,8 @@
     </div>
         
     <p id="demo">Score: 0</p>
+    
     <div class="hold">
-        
         <input type="text" class="test" id="one" maxlength="1" autocomplete="off">
         <input type="text" class="test" id="two" maxlength="1" autocomplete="off">
         <input type="text" class="test" id="tree" maxlength="1" autocomplete="off">
@@ -36,17 +36,13 @@
                 <p id="message"></p>
                 <p id="message2"></p>
             </div>
-            <div class="btn-hold">
+            <div id="btn-hold">
                 <button class="btn-d" id="playLowButton">Continue</button>
                 <button class="btn-c" type="submit" onclick="resetGame()"><i class="fa-solid fa-rotate-right"></i> Reset game</button>
                 <button class="btn-b" type="submit" onclick="exitGame()">Exit game</button>
             </div>
         </div>
     </div>    
-    <!-- <div class="btn-hold">
-        <button class="btn-b" type="submit" onclick="exitGame()">Exit game</button>
-        <button class="btn-c" type="submit" onclick="resetGame()"><i class="fa-solid fa-rotate-right"></i> Reset game</button>
-    </div> -->
     <script src="game.js"></script>
 </body>
 </html>

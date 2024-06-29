@@ -196,7 +196,7 @@ const exitGame = () =>
 }
 exitGame()
 
-var elts = document.getElementsByClassName('test')
+let elts = document.getElementsByClassName('test')
 Array.from(elts).forEach(function(elt)
 {
     elt.addEventListener("keyup", function(event) 
